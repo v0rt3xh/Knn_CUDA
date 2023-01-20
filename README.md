@@ -1,5 +1,11 @@
 # Implement k Nearest Neighbor Algorithm with CUDA
 Haitao Huang
+###
+The k nearest neighbors (k-NN) algorithm is widely used in the industry. In particular, the k-NN search algorithm can be applied to the inference stage of recommender systems. For a user, the recommender might query a content pool to find the corresponding k most suitable contents. 
+
+Usually, the system has latency constraints, which demands fast operations. Using GPU to accelerate the process is a feasible direction. We implement a naive version of the k-NN search algorithm in CUDA with pitch and 2D memory management. 
+
+The similarity measure is the cosine similarity.
 
 ### Repo Structure
 We have seven folders and this README file. 
@@ -67,8 +73,8 @@ Replace scalingGPU by scalingCPU, you can run the C++ implementation with the sa
 [Reference_1](https://stackoverflow.com/questions/16119943/how-and-when-should-i-use-pitched-pointer-with-the-cuda-api), [Reference_2](https://nichijou.co/cuda5-coalesce/), 
 [Reference_3](https://nichijou.co/cudaRandom-memAlign/),
 [Reference_4](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html)
-`
-In the class, we have learned about commands like ```cudaMalloc()```. The result of ```cudaMalloc()``` is similar to that of ```malloc()```: We obtain a contiguous memory chunk. Things will be different if we treat the memory as a 2D array.
+
+The result of ``` cudaMalloc() ``` is similar to that of ``` malloc() ```: We obtain a contiguous memory chunk. Things will be different if we treat the memory as a 2D array.
 
 Memory access on GPU works much better if the data items are aligned. When allocating 2D arrays, if we can let every row starts at a memory boundary address, we may improve the performance. Pitch can help us with the alignment process.
 
@@ -327,3 +333,6 @@ $$5, 10, 20, 40, 80, 160, 320$$
 
 $$25, 50, 100, 200, 400, 800$$
 
+#### Credit
+This implementation is developed based on 
+Vincent Garcia's work [Link](https://github.com/vincentfpgarcia/kNN-CUDA/). 

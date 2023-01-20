@@ -1,11 +1,9 @@
-# ME/CS/ECE759 Final Project
-## Implement k Nearest Neighbor Algorithm with CUDA
+# Implement k Nearest Neighbor Algorithm with CUDA
 Haitao Huang
 
 ### Repo Structure
 We have seven folders and this README file. 
 ```
-FinalProject759/
 ├── data, This folder stores the data for debugging. 
 ├── debug, This folder includes the debugging scripts for CUDA/C++ implementations.
 ├── include, This folder consists of header files.

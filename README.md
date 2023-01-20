@@ -15,7 +15,7 @@ We have seven folders and this README file.
 
 ### Instructions for Running the Scripts
 <span style="color:red">
-Notice: Please stay in the directory <i>FinalProject759</i> and do not descend into its child directories.
+Notice: Please stay in the root directory and do not descend into its child directories.
 </span>
 
 #### Running the Debugging Scripts

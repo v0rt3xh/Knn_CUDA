@@ -8,12 +8,11 @@ Usually, the system has latency constraints, which demands fast operations. Usin
 The similarity measure is the cosine similarity.
 
 ### Repo Structure
-We have seven folders and this README file. 
+We have six folders and this README file. 
 ```
 ├── data, This folder stores the data for debugging. 
 ├── debug, This folder includes the debugging scripts for CUDA/C++ implementations.
 ├── include, This folder consists of header files.
-├── output, This folder stores the results of our experiments.
 ├── scaling, This folder stores the scaling analysis scripts.
 ├── source, You can find the implementation of k-NN search here.
 ├── visualizations, Containing the resulting charts and a jupyter notebook that genereates them.

@@ -24,7 +24,6 @@ Notice: Please stay in the root directory and do not descend into its child dire
 </span>
 
 #### Running the Debugging Scripts
-To reproduce the results in section 4.1, please run the following scripts.
 *(CUDA implementation)*  
 ```
 nvcc -o debugExec source/knnSearch.cu debug/CUDA/debug.cu 
@@ -264,7 +263,7 @@ We decide to use ```ifstream``` and ```sstream``` to read the data. Cpp seems to
     }
 ```
 **4.2 Debug and test results**
-We compile and run the file on Euler. Below shows the result.
+We compile and run the file on a compute cluster. Below shows the result.
 
 ```
 ===== Debug Configuration =====
@@ -334,4 +333,4 @@ $$25, 50, 100, 200, 400, 800$$
 
 #### Credit
 This implementation is developed based on 
-Vincent Garcia's work [Link](https://github.com/vincentfpgarcia/kNN-CUDA/). 
+Vincent Garcia's work: [Link](https://github.com/vincentfpgarcia/kNN-CUDA/). 
